@@ -5,7 +5,7 @@ metadata:
   labels:
     app: python-deployment
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: python-deployment
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: python-deployment
-        image: registry.digitalocean.com/testregistry/digitaloceanflaskk8s:latest
+        image: gpamfilis/kubebyexamplel1backend:latest
         ports:
-        - containerPort: 8080
+        - containerPort: 5000

@@ -9,6 +9,6 @@ RUN pip install --upgrade pip
 COPY pyproject.toml poetry.lock ./
 RUN poetry export -f requirements.txt -o requirements.txt --without-hashes
 RUN pip install -r requirements.txt
-EXPOSE 5000
+EXPOSE 8080
 COPY ./ /code
 CMD [ "python", "main.py" ]
